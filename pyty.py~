@@ -69,7 +69,7 @@ def play_sound(event):
         sound = None
 
     if sound:
-        os.system('play -q sounds/{0} &'.format(sound))
+        os.system('mpg123 --quiet sounds/{0} &'.format(sound))
 
 def sigint_handler(signum, frame):
     print ('Received SIGINT', file=sys.stderr)  # Say to the user what is going on
